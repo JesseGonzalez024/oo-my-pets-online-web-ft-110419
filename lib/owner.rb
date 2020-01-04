@@ -46,29 +46,15 @@ class Owner
       end
     end
   end
-  
-#--------------------------------  
   def sell_pets
     pets = self.dogs + self.cats
     pets.each do |pet|
       pet.mood = "nervous"
       pet.owner = nil
-    
-    
-    # Dog.all.find do |dog|
-    #   if dog.owner == self 
-    #     dog.mood = "nervous"
-    #   end
-    # end
-    # Cat.all.find do |cat|
-    #   if cat.owner == self 
-    #     cat.mood = "nervous"
-    #   end
-    # end
     end
   end
   def list_pets
-      return "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+    return "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
   end
 end
 
